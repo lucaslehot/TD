@@ -1,5 +1,5 @@
 /*Désclaration des variables fondamentales*/
-let container = document.querySelector("container")
+let container = document.querySelector(".playZone")
 let body = document.querySelector("body")
 let leftStuff = document.querySelector(".leftStuff")
 let midStuff = document.querySelector(".midStuff")
