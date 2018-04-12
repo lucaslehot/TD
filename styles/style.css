@@ -1,0 +1,169 @@
+
+body{
+  display: flex;
+}
+.leftStuff{
+  width: 160px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.midStuff{
+  width: 1600px;
+}
+.rightStuff{
+  margin-left: 100px;
+  width: 160px;
+}
+#mute{
+  position: fixed;
+  top : 30px;
+  left: 1650px;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 100%;
+}
+.start{
+  display: flex;
+  position : fixed;
+  top : 400px;
+  left : 740px;
+  font-size: 75px;
+  border : white solid 2px;
+  background-color: #0984e3;
+  font-family: 'Gamja Flower', cursive;
+  color: white;
+  z-index:0;
+}
+.start:hover{
+  background-color: white;
+  color : #0984e3;
+  cursor : pointer;
+}
+#banner1{
+  position: fixed;
+  left : -1160px;
+  top : 100px;
+  opacity : 0;
+}
+#banner2{
+  position: fixed;
+  left : 2340px;
+  top : 500px;
+  opacity : 0;
+}
+#midBanner{
+  position: fixed;
+  left : 940px;
+  top : 350px;
+  font-size: 100px;
+  font-family: Arial sans-serif;
+  font-weight: 900;
+  color: black;
+  opacity: 0;
+}
+#gameOver{
+  display: none;
+  position: fixed;
+  top : 200px;
+  left : 510px;
+
+}
+.playZone{
+  width: 1600px;
+  height: 900px;
+  position: relative;
+}
+.block{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+}
+.blankBlock{
+  background: #12CBC4;
+}
+.rawBlock{
+  background: rgba(225, 112, 85,0.75);
+  border : 3px outset white;
+  border-radius: 100%;
+}
+.rawBlock:hover{
+  cursor: cell;
+  background: red;
+}
+.wallBlock{
+  background : rgba(99, 110, 114,1.0);
+}
+.pathBlock{
+  background: #ffeaa7;
+}
+.spawnBlock {
+  z-index: 0;
+  height: 120px;
+  width: 120px;
+}
+.baseBlock{
+  z-index: 0;
+  height: 120px;
+  width: 120px;
+}
+.enemy1Block{
+  background : rgb(0, 98, 102);
+  border-radius: 100%;
+}
+.enemy1Block:hover{
+  cursor: crosshair;
+}
+.enemy2Block{
+  background: rgb(0,255,0);
+  border-radius: 100%;
+}
+.enemy2Block:hover{
+  cursor: crosshair;
+}
+.enemy3Block{
+  background: rgb(255,0,0);
+  border-radius: 100%;
+}
+.enemy3Block:hover{
+  cursor: crosshair;
+}
+.enemy4Block{
+  background: rgb(0,0,255);
+  border-radius: 100%;
+}
+.enemy4Block:hover{
+  cursor: crosshair;
+}
+.turret1{
+  background: grey;
+  border-radius: 100%;
+  border: 2px inset white;
+}
+.qteWord{
+  position: fixed;
+  background: rgba(150, 150, 150, 0.5);
+  top:500px;
+  left:850px;
+  display: flex;
+  justify-content: space-around;
+}
+.qteLetter{
+  color: red;
+  font-size: 50px;
+  font-family: 'arial';
+  margin-right: 20px;
+}
+.julImg{
+  width: 38px;
+  height: 38px;
+}
+.font{
+  font-family: 'Gamja Flower', cursive;
+  font-size: 30px;
+}
