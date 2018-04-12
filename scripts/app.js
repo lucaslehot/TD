@@ -203,6 +203,23 @@ for (let i=0;i<rawBlocks.length;i++){
       else (window.alert("Insufficient founds"))
     }
   )
+  rawBlocks[i].addEventListener(
+    'contextmenu',
+    function(e){
+      e.preventDefault()
+      if (goldCount > 300){
+        rawBlocks[i].classList.replace("rawBlock", "turret2")
+        goldCount-=300
+        let image = document.createElement('img')
+        image.setAttribute("src","images/orchestra.png")
+        image.setAttribute("alt","orchestra")
+        image.style.height=35+"px"
+        image.style.width=35+"px"
+        rawBlocks[i].appendChild(image)
+      }
+      else (window.alert("Insufficient founds"))
+    }
+  )
 }
 //SOUND ANIMATION
 let blankBlocks = document.querySelectorAll(".blankBlock")
