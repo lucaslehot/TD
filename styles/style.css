@@ -1,174 +1,304 @@
 
 body{
-  display: flex;
+  margin: 0;
 }
-.leftStuff{
-  width: 160px;
-  height: 800px;
+header{
+  width: 100%;
+  height: auto;
+  background: #FAFAFA;
+}
+
+div.headerTop{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.headerTop div.logo {
+  width: 125px;
+  margin: 5px;
+}
+.headerTop div.logo img{
+  width: 100%;
+}
+div.titleAndPlay{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  width: auto;
+  margin-left: 40px;
 }
-.midStuff{
-  width: 1600px;
-}
-.rightStuff{
-  margin-left: 100px;
-  width: 160px;
-}
-#mute{
-  position: fixed;
-  top : 30px;
-  left: 1650px;
-  width: 100px;
-  height: 100px;
-  background: white;
-  border-radius: 100%;
-}
-.start{
-  display: flex;
-  position : fixed;
-  top : 400px;
-  left : 740px;
-  font-size: 75px;
-  border : white solid 2px;
-  background-color: #0984e3;
-  font-family: 'Gamja Flower', cursive;
-  color: white;
-  z-index:0;
-}
-.start:hover{
-  background-color: white;
-  color : #0984e3;
-  cursor : pointer;
-}
-#banner1{
-  position: fixed;
-  left : -1160px;
-  top : 100px;
-  opacity : 0;
-}
-#banner2{
-  position: fixed;
-  left : 2340px;
-  top : 500px;
-  opacity : 0;
-}
-#midBanner{
-  position: fixed;
-  left : 940px;
-  top : 350px;
-  font-size: 100px;
-  font-family: Arial sans-serif;
-  font-weight: 900;
-  color: black;
-  opacity: 0;
-}
-#gameOver{
-  display: none;
-  position: fixed;
-  top : 200px;
-  left : 510px;
+div.titleAndPlay h1{
+  margin: auto;
 
 }
-.playZone{
-  width: 1600px;
-  height: 900px;
-  position: relative;
+div.titleAndPlay a h1{
+  border: 3px solid #1289A7;
+
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
 }
-.block{
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  box-sizing: border-box;
+div.titleAndPlay a:hover{
+text-decoration: none;
 }
-.blankBlock{
-  background: #12CBC4;
+.headerBot .nav a:hover{
+background: none;
 }
-.rawBlock{
-  background: rgba(225, 112, 85,0.75);
-  border : 3px outset white;
-  border-radius: 100%;
+div.titleAndPlay a{
+  margin: auto;
+  margin-top: -10px;
+  color: black;
 }
-.rawBlock:hover{
-  cursor: cell;
-  background: red;
+div.login{
+  margin-right: 40px;
+  margin-top: 50px;
 }
-.wallBlock{
-  background : rgba(99, 110, 114,1.0);
+div.login a{
+  color: black;
 }
-.pathBlock{
-  background: #ffeaa7;
+a{
+    text-decoration: none;
 }
-.spawnBlock {
-  z-index: 0;
-  height: 120px;
-  width: 120px;
+div.headerBot{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FAFAFA;
 }
-.baseBlock{
-  z-index: 0;
-  height: 120px;
-  width: 120px;
-}
-.enemy1Block{
-  background : rgb(0, 98, 102);
-  border-radius: 100%;
-}
-.enemy1Block:hover{
-  cursor: crosshair;
-}
-.enemy2Block{
-  background: rgb(0,255,0);
-  border-radius: 100%;
-}
-.enemy2Block:hover{
-  cursor: crosshair;
-}
-.enemy3Block{
-  background: rgb(255,0,0);
-  border-radius: 100%;
-}
-.enemy3Block:hover{
-  cursor: crosshair;
-}
-.enemy4Block{
-  background: rgb(0,0,255);
-  border-radius: 100%;
-}
-.enemy4Block:hover{
-  cursor: crosshair;
-}
-.turret1{
-  background: grey;
-  border-radius: 100%;
-  border: 2px inset white;
-}
-.turret2{
-  border-radius: 100%;
-  border: 2px inset white;
-  opacity: 1;
-}
-.qteWord{
-  position: fixed;
-  background: rgba(150, 150, 150, 0.5);
-  top:500px;
-  left:850px;
+ul.nav{
   display: flex;
   justify-content: space-around;
 }
-.qteLetter{
-  color: red;
-  font-size: 50px;
-  font-family: 'arial';
+ul.nav li{
+  margin-top:-20px;
+
+}
+li{
+  list-style: none;
+}
+div.main{
+    background-image: linear-gradient(to top, #ebc5d2, #6a98c7);
+    padding-top: 30px;
+}
+div.mainCaption{
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+
+}
+.mainCaption div.logo{
+  width: 100px;
+  margin-left: -50px;
+}
+.logo img{
+  width: 100%;
+}
+.mainCaption img{
+  margin-top: -15px;
+}
+div.carouselContainer{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+div.leaderboardAndAd{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 40px;
+}
+div.leaderboard{
+  width: 40%;
+  display: flex;
+}
+div.rankContainer{
+  width: 33.33%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+div.leaderboardRank{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#firstPlace{
+height: 250px;
+background: #d6b452;
+}
+#secondPlace{
+height: 180px;
+background: #cdcdcd;
+}
+#thirdPlace{
+  height: 130px;
+  background: #a9652a;
+}
+p.nickname{
+  margin-top: 10px;
+  color: white;
+  font-size: 17px;
+}
+div.scoreContainer{
+  display: flex;
+  justify-content: center;
+}
+.scoreContainer p{
+  color: #CBC6A0;
+  font-size: 30px;
+}
+.leaderboardAndAd div.ad{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+div.rulesContainer{
+  width: 85%;
+  margin: auto;
+  margin-top: 100px;
+}
+.rulesContainer h4{
+  color: #CBC6A0;
+  margin-bottom: 40px;
+}
+div.rules{
+    border: 1px solid #707070;
+    padding: 20px;
+}
+div.more{
+  margin:auto;
+  margin-top: 40px;
+  width: 80px;
+  height: 60px;
+  background-image: url("../images/downarrow.svg");
+  background-repeat: no-repeat;
+  background-size: 100%
+}
+
+div.youtubeVideoandAd{
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+div.youtube{
+  width: 575px;
+}
+.youtubeVideoandAd div.ad{
+  width: 410px;
+}
+footer{
+  width: 100%;
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.ourLogo img{
+  width: 80px;
+  height: 80px;
+  margin: 10px 0 0 10px;
+}
+div.policyNetworkContainer{
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+div.policy{
+
+  margin-left: 20px;
+  margin-top: 25px;
+}
+div.ourLogo{
+  width:90px;
+}
+.policy a{
+  color: black;
+}
+ footer{
+   width: 100%;
+    display: flex;
+   flex-direction: row;
+
+
+ }
+div.logoAndPolicy{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logoAndPolicy div.logo{
+  width: 80px;
   margin-right: 20px;
 }
-.julImg{
-  width: 38px;
-  height: 38px;
+.logoAndPolicy div.logo img{
+  width: 100%;
+  height: 80px;
+  margin: 10px;
 }
-.font{
-  font-family: 'Gamja Flower', cursive;
-  font-size: 30px;
+div.policy{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+div.socialnetwork{
+  display: flex;
+  width: 40%;
+  margin-top: 30px;
+
+}
+.socialnetwork img{
+  width: 40px;
+  height: 40px;
+}
+.socialnetwork ul{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-self:
+}
+.socialnetwork li{
+  display: flex;
+  width: auto;
+}
+.socialnetwork li a{
+  color: black;
+}
+div.container{
+  width: 60%;
+  display: flex;
+  margin: 0;
+}
+
+img.ad{
+  width: 100%;
+}
+
+
+
+#more{
+  display: none;
+}
+.comand img{
+  width: 60px;
+  margin-left: 20px;
+}
+div.comand{
+  font-size: 15px;
+}
+.carousel-caption h3{
+  color: black;
+}
+.socialnetwork li a img{
+  margin-left: 7px;
 }
