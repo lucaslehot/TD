@@ -30,19 +30,28 @@ div.titleAndPlay h1{
   margin: auto;
 
 }
+div.titleAndPlay a{
+  text-decoration: none;
+}
 div.titleAndPlay a h1{
   border: 3px solid #1289A7;
-
   border-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 50px;
+  text-decoration: none;
+  transition: 0.2s all ease;
 }
-div.titleAndPlay a:hover{
-text-decoration: none;
+div.titleAndPlay a:hover h1{
+  text-decoration: none;
+  background: #1289A7;
+  color: white;
+  transition: 0.2s all ease;
+
+
 }
 .headerBot .nav a:hover{
-background: none;
+  background: none;
 }
 div.titleAndPlay a{
   margin: auto;
