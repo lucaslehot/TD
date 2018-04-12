@@ -145,6 +145,11 @@ body{
   border-radius: 100%;
   border: 2px inset white;
 }
+.turret2{
+  border-radius: 100%;
+  border: 2px inset white;
+  opacity: 1;
+}
 .qteWord{
   position: fixed;
   background: rgba(150, 150, 150, 0.5);

@@ -10,6 +10,7 @@ let timer=30
 let waveCount=1
 let turret1Blocks = document.querySelectorAll(".turret1")
 let range1 = 80
+let range2 = 40
 let currentEnemyType
 let enemy2HP = []
 let enemy3HP = []
@@ -18,6 +19,7 @@ let scoreCount
 let bdbsHP = 10
 let deviantCount=0
 let deviantTimer=0
+let turret2Hp=['1','0.6','0.3']
 let julSrc = ['images/jul1.png','images/jul2.png','images/jul3.png','images/jul4.png']
 /*Génération des tableaux de couleurs qui correspondent aux HP des adversaires*/
 for (let i=0;i<25;i++){
@@ -238,6 +240,7 @@ function soundAnimationFunction(){
 //TURRETS DAMAGES
 /*Définie quand les tourelles vont s'activer et faire des dégats ainsi que l'ensemble des évènementsqui en découlent*/
 let turretsHits = setInterval(function(){
+  turret2Blocks = document.querySelectorAll(".turret2")
   turret1Blocks = document.querySelectorAll(".turret1")
   for (let i=0;i<turret1Blocks.length;i++){
     for (let j=0;j<enemysList.length;j++){
@@ -270,7 +273,6 @@ let turretsHits = setInterval(function(){
           turret1Blocks[i].style.filter = "none"
         },350)
         if (enemysList[j].style.background == enemyHP[currentEnemyType-1][(enemyHP[currentEnemyType-1].length-1)]){
-
           container.removeChild(enemysList[j])
           enemysList=document.querySelectorAll(".enemy1Block , .enemy2Block, .enemy3Block, .enemy4Block")
           goldCount+=Math.floor((5*waveCount+1)/2)
@@ -280,8 +282,46 @@ let turretsHits = setInterval(function(){
       }
     }
   }
+  for (let i=0;i<turret2Blocks.length;i++){
+    for (let j=0;j<enemysList.length;j++){
+      if ((parseInt(enemysList[j].style.top)-parseInt(turret2Blocks[i].style.top))<=range2 && (parseInt(enemysList[j].style.top)-parseInt(turret2Blocks[i].style.top))>=(-range2) && (parseInt(enemysList[j].style.left)-parseInt(turret2Blocks[i].style.left))<=range2 && (parseInt(enemysList[j].style.left)-parseInt(turret2Blocks[i].style.left))>=(-range2)) {
+        turret2Blocks[i].style.opacity = turret2Hp[turret2Hp.indexOf(turret2Blocks[i].style.opacity)+1]
+        container.removeChild(enemysList[j])
+        enemysList=document.querySelectorAll(".enemy1Block , .enemy2Block, .enemy3Block, .enemy4Block")
+        goldCount+=Math.floor((5*waveCount+1)/2)
+        scoreCount+=1
+        score.innerHTML=scoreCount
+        turret2Blocks[i].style.height=80+"px"
+        turret2Blocks[i].style.width=80+"px"
+        turret2Blocks[i].style.top=parseInt(turret2Blocks[i].style.top)-8+"px"
+        turret2Blocks[i].style.left=parseInt(turret2Blocks[i].style.left)-8+"px"
+        turret2Blocks[i].style.transition="all 0.1s ease-in"
+        turret2Blocks[i].firstChild.style.height=75+"px"
+        turret2Blocks[i].firstChild.style.width=75+"px"
+        turret2Blocks[i].firstChild.style.top=parseInt(turret2Blocks[i].style.top)+8+"px"
+        turret2Blocks[i].firstChild.style.left=parseInt(turret2Blocks[i].style.left)+8+"px"
+        turret2Blocks[i].firstChild.style.transition="all 0.1s ease-in"
+        let timeoutID = window.setTimeout(function(){
+          turret2Blocks[i].style.height=40+"px"
+          turret2Blocks[i].style.width=40+"px"
+          turret2Blocks[i].style.top=parseInt(turret2Blocks[i].style.top)+8+"px"
+          turret2Blocks[i].style.left=parseInt(turret2Blocks[i].style.left)+8+"px"
+          turret2Blocks[i].style.transition="all 0.3s ease-in"
+          turret2Blocks[i].firstChild.style.height=35+"px"
+          turret2Blocks[i].firstChild.style.width=35+"px"
+          turret2Blocks[i].firstChild.style.top=parseInt(turret2Blocks[i].style.top)+8+"px"
+          turret2Blocks[i].firstChild.style.left=parseInt(turret2Blocks[i].style.left)+8+"px"
+          turret2Blocks[i].firstChild.style.transition="all 0.3s ease-in"
+        },350)
+        if (turret2Blocks[i].style.opacity == 0.3){
+          turret2Blocks[i].classList.replace("turret2", "rawBlock")
+          turret2Blocks[i].removeChild(turret2Blocks[i].lastChild)
+          turret2Blocks[i].style.opacity = '1'
+        }
+      }
+    }
+  }
 },645.161)
-
 //SETTING ENEMY BEHAVIOUR
 function game(){
   /*Définie l'ajout constant de golds*/
