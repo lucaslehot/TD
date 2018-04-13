@@ -224,6 +224,7 @@ for (let i=0;i<rawBlocks.length;i++){
   )
 }
 //SOUND ANIMATION
+/*
 let blankBlocks = document.querySelectorAll(".blankBlock")
 function soundAnimationFunction(){
   let soundAnimation = setInterval(function(){
@@ -237,6 +238,7 @@ function soundAnimationFunction(){
       }
   },(645.161)*4)
 }
+*/
 //TURRETS DAMAGES
 /*Définie quand les tourelles vont s'activer et faire des dégats ainsi que l'ensemble des évènementsqui en découlent*/
 let turretsHits = setInterval(function(){
